@@ -20,12 +20,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#if os(iOS)
 import UIKit
 
 struct ControllerModalPresenter {
 
     var rootViewController: UIViewController? {
-        return UIApplication.shared.keyWindow?.rootViewController
+        return UIApplication.shared()?.keyWindow?.rootViewController
     }
 
     func present(controller: UIViewController) {
@@ -53,4 +54,6 @@ struct ControllerModalPresenter {
             return root
         }
     }
+
 }
+#endif

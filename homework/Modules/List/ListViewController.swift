@@ -1,18 +1,18 @@
-//
-
 import UIKit
+import Data
 
 class ListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        DemoAuthClient().token { token in
-            guard let token = token as? String else {
-                return
-            }
-            
-            DemoAuthClient().getListOfTrips(with: token)
-        }
+//        DemoAuthClient().token { token in
+//            guard let token = token as? String else {
+//                return
+//            }
+//            
+//            DemoAuthClient().getListOfTrips(with: token)
+//        }
+        TripsProvider().getTripsList()
     }
     
 

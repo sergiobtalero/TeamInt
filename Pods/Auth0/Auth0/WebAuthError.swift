@@ -20,6 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#if WEB_AUTH_PLATFORM
 import Foundation
 
 /**
@@ -40,7 +41,7 @@ public enum WebAuthError: CustomNSError {
     case pkceNotAllowed(String)
     case noNonceProvided
     case missingResponseParam(String)
-    case invalidIdTokenNonce
+    case invalidIdTokenNonce // TODO: Remove on the next major
     case missingAccessToken
     case unknownError
 
@@ -94,3 +95,4 @@ public enum WebAuthError: CustomNSError {
         }
     }
 }
+#endif
