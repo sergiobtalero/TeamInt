@@ -16,7 +16,6 @@
 		D406616325A3D5220090E143 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D406616225A3D5220090E143 /* List.storyboard */; };
 		D406616625A3D53B0090E143 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406616525A3D53B0090E143 /* ListViewController.swift */; };
 		D406620B25A504840090E143 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D406620225A504840090E143 /* Data.framework */; };
-		D406621225A504840090E143 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406621125A504840090E143 /* DataTests.swift */; };
 		D406621425A504840090E143 /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = D406620425A504840090E143 /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D406621725A504840090E143 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D406620225A504840090E143 /* Data.framework */; };
 		D406621825A504840090E143 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D406620225A504840090E143 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -57,6 +56,9 @@
 		D40663BA25A5EEA40090E143 /* Injector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40663B325A5EEA40090E143 /* Injector.framework */; };
 		D40663BB25A5EEA40090E143 /* Injector.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D40663B325A5EEA40090E143 /* Injector.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D40663C525A5EEB70090E143 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40663C425A5EEB70090E143 /* Injector.swift */; };
+		D406646F25A60D350090E143 /* Trips.json in Resources */ = {isa = PBXBuildFile; fileRef = D406646E25A60D340090E143 /* Trips.json */; };
+		D406648225A60E070090E143 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406648125A60E070090E143 /* URLSessionMock.swift */; };
+		D406649A25A60E4F0090E143 /* TripsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406649925A60E4F0090E143 /* TripsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,7 +149,6 @@
 		D406620425A504840090E143 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		D406620525A504840090E143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D406620A25A504840090E143 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D406621125A504840090E143 /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
 		D406621325A504840090E143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D406622525A504CD0090E143 /* ServiceContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContract.swift; sourceTree = "<group>"; };
 		D406622925A504F00090E143 /* TripsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsService.swift; sourceTree = "<group>"; };
@@ -186,6 +187,9 @@
 		D40663B525A5EEA40090E143 /* Injector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Injector.h; sourceTree = "<group>"; };
 		D40663B625A5EEA40090E143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D40663C425A5EEB70090E143 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
+		D406646E25A60D340090E143 /* Trips.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Trips.json; sourceTree = "<group>"; };
+		D406648125A60E070090E143 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		D406649925A60E4F0090E143 /* TripsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTests.swift; sourceTree = "<group>"; };
 		ED094279F9B25C36F85946E4 /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
 		EE24037154B39BB483363D24 /* Pods-Data.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Data.debug.xcconfig"; path = "Target Support Files/Pods-Data/Pods-Data.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -343,8 +347,10 @@
 		D406621025A504840090E143 /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
-				D406621125A504840090E143 /* DataTests.swift */,
+				D406646C25A60D150090E143 /* JSONS */,
+				D406646D25A60D150090E143 /* Mocks */,
 				D406621325A504840090E143 /* Info.plist */,
+				D406649925A60E4F0090E143 /* TripsTests.swift */,
 			);
 			path = DataTests;
 			sourceTree = "<group>";
@@ -484,6 +490,22 @@
 				D40663C425A5EEB70090E143 /* Injector.swift */,
 			);
 			path = Injector;
+			sourceTree = "<group>";
+		};
+		D406646C25A60D150090E143 /* JSONS */ = {
+			isa = PBXGroup;
+			children = (
+				D406646E25A60D340090E143 /* Trips.json */,
+			);
+			path = JSONS;
+			sourceTree = "<group>";
+		};
+		D406646D25A60D150090E143 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D406648125A60E070090E143 /* URLSessionMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -714,6 +736,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D406646F25A60D350090E143 /* Trips.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -863,7 +886,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D406621225A504840090E143 /* DataTests.swift in Sources */,
+				D406649A25A60E4F0090E143 /* TripsTests.swift in Sources */,
+				D406648225A60E070090E143 /* URLSessionMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
