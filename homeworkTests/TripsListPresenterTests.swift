@@ -12,7 +12,8 @@ class TripsListPresenterTests: XCTestCase {
         let getTripListUseCaseMock = GetTripsListUseCaseMock(trips: getTripsFromLocalFile(),
                                                          error: nil)
         let presenter = TripsListPresenter(view: view,
-                                       getTripsListUseCase: getTripListUseCaseMock)
+                                           getTripsListUseCase: getTripListUseCaseMock,
+                                           getTripsListMockedUseCase: nil)
         
         // WHEN
         presenter.fetchData()
@@ -33,7 +34,8 @@ class TripsListPresenterTests: XCTestCase {
         let getTripListUseCaseMock = GetTripsListUseCaseMock(trips: [],
                                                              error: GetTripsListUseCaseError.generic)
         let presenter = TripsListPresenter(view: view,
-                                       getTripsListUseCase: getTripListUseCaseMock)
+                                           getTripsListUseCase: getTripListUseCaseMock,
+                                           getTripsListMockedUseCase: nil)
         
         // WHEN
         presenter.fetchData()

@@ -3,13 +3,13 @@ import Domain
 final class TripsListPresenter {
     private weak var view: TripsListViewContract?
     private let getTripsListUseCase: GetTripsListUseCaseContract
-    private let getTripsListMockedUseCase: GetTripsListMockedUseCaseContract
+    private var getTripsListMockedUseCase: GetTripsListMockedUseCaseContract?
     
     var trips: [Trip] = []
     
     public init(view: TripsListViewContract?,
                 getTripsListUseCase: GetTripsListUseCaseContract,
-                getTripsListMockedUseCase: GetTripsListMockedUseCaseContract) {
+                getTripsListMockedUseCase: GetTripsListMockedUseCaseContract?) {
         self.view = view
         self.getTripsListUseCase = getTripsListUseCase
         self.getTripsListMockedUseCase = getTripsListMockedUseCase
@@ -35,7 +35,10 @@ private extension TripsListPresenter {
     // WARNING:
     // During development, the Auth service kept failing, so development had to continue with mocking response
     func mockData() {
-        let trips = getTripsListMockedUseCase.execute()
-        view?.renderTrips(trips.map { TripTableViewModel(trip: $0) })
+        if let trips = getTripsListMockedUseCase?.execute() {
+            view?.renderTrips(trips.map { TripTableViewModel(trip: $0) })
+        } else {
+            view?.showError()
+        }
     }
 }

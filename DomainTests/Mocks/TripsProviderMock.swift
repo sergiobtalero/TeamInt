@@ -22,6 +22,10 @@ final class TripsProviderMock {
 
 // MARK: - TripsProviderContract
 extension TripsProviderMock: TripsProviderContract {
+    func getTripsListMocked() -> [Trip] {
+        return trips ?? []
+    }
+    
     func getTripsList() -> Promise<[Trip]> {
         return Promise { seal in
             if let trips = trips {

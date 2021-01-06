@@ -71,7 +71,6 @@
 		D46CC8CA25A649C00062E288 /* Trips.json in Resources */ = {isa = PBXBuildFile; fileRef = D46CC8C825A649C00062E288 /* Trips.json */; };
 		D46CC90C25A659C00062E288 /* TripsListViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC90B25A659C00062E288 /* TripsListViewMock.swift */; };
 		D46CC91425A659FC0062E288 /* GetTripsListUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC91325A659FC0062E288 /* GetTripsListUseCaseMock.swift */; };
-		D46CC91D25A65B930062E288 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC91C25A65B930062E288 /* URLSessionMock.swift */; };
 		D46CC92C25A65EFC0062E288 /* Trips.json in Resources */ = {isa = PBXBuildFile; fileRef = D46CC92B25A65EFC0062E288 /* Trips.json */; };
 		D46CC93425A65FA70062E288 /* GetTripsListMockedUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC93325A65FA70062E288 /* GetTripsListMockedUseCase.swift */; };
 		D4A5DE7125A6345D00C05191 /* TripsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A5DE7025A6345D00C05191 /* TripsList.storyboard */; };
@@ -230,7 +229,6 @@
 		D46CC8C825A649C00062E288 /* Trips.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trips.json; sourceTree = "<group>"; };
 		D46CC90B25A659C00062E288 /* TripsListViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListViewMock.swift; sourceTree = "<group>"; };
 		D46CC91325A659FC0062E288 /* GetTripsListUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripsListUseCaseMock.swift; sourceTree = "<group>"; };
-		D46CC91C25A65B930062E288 /* URLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		D46CC92B25A65EFC0062E288 /* Trips.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trips.json; sourceTree = "<group>"; };
 		D46CC93325A65FA70062E288 /* GetTripsListMockedUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripsListMockedUseCase.swift; sourceTree = "<group>"; };
 		D4A5DE7025A6345D00C05191 /* TripsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsList.storyboard; sourceTree = "<group>"; };
@@ -339,7 +337,6 @@
 		66AB47D6243D1570000508FB /* homework */ = {
 			isa = PBXGroup;
 			children = (
-				D46CC91B25A65B930062E288 /* Mocks */,
 				D406616025A3D4F50090E143 /* Modules */,
 				66AB47D7243D1570000508FB /* AppDelegate.swift */,
 				66AB47E0243D1572000508FB /* Assets.xcassets */,
@@ -643,14 +640,6 @@
 			children = (
 				D46CC90B25A659C00062E288 /* TripsListViewMock.swift */,
 				D46CC91325A659FC0062E288 /* GetTripsListUseCaseMock.swift */,
-			);
-			path = Mocks;
-			sourceTree = "<group>";
-		};
-		D46CC91B25A65B930062E288 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				D46CC91C25A65B930062E288 /* URLSessionMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -1113,7 +1102,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D46CC91D25A65B930062E288 /* URLSessionMock.swift in Sources */,
 				66AB47D8243D1570000508FB /* AppDelegate.swift in Sources */,
 				D400F2CE25A6302500450BB8 /* TripsListPresenter.swift in Sources */,
 				D400F2B525A62F1D00450BB8 /* TripsListViewController.swift in Sources */,
