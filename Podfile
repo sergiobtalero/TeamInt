@@ -6,6 +6,10 @@ use_frameworks!
 target 'homework' do
   pod 'Auth0', '~> 1.19'
   pod "PromiseKit", "~> 6.8"
+
+  target 'homeworkTests' do
+    inherit! :search_paths
+  end
 end
 
 target 'Data' do

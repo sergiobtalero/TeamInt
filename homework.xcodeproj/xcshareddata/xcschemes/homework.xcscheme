@@ -73,6 +73,16 @@
                ReferencedContainer = "container:homework.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D46CC89825A6464D0062E288"
+               BuildableName = "homeworkTests.xctest"
+               BlueprintName = "homeworkTests"
+               ReferencedContainer = "container:homework.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
