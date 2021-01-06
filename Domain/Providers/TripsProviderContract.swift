@@ -6,4 +6,5 @@ public enum TripsProviderError: Error {
 
 public protocol TripsProviderContract {
     func getTripsList() -> Promise<[Trip]>
+    func getTripsListMocked() -> [Trip]
 }

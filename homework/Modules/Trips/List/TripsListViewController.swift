@@ -15,8 +15,11 @@ final class TripsListViewController: UIViewController {
     // MARK: - Presenter
     private lazy var presenter: TripsListPresenterContract = {
         let getTripsUseCase = Injector.provideGetTripsListUseCase()
+        let getTripsListMockedUseCase = Injector.provideGetTripsListMockedUseCase()
+        
         return TripsListPresenter(view: self,
-                                  getTripsListUseCase: getTripsUseCase)
+                                  getTripsListUseCase: getTripsUseCase,
+                                  getTripsListMockedUseCase: getTripsListMockedUseCase)
     }()
 
     // MARK: - Life Cycle

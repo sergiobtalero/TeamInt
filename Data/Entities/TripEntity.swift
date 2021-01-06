@@ -15,12 +15,19 @@ struct TripEntity: DataEntity {
     }
     
     func toDomain() throws -> Trip {
-        Trip(typename: typename,
-             id: id,
-             deliveryStatus: deliveryStatus,
-             progress: progress,
-             deliveredAt: deliveredAt,
-             scheduledDeliveryOn: scheduledDeliveryOn,
-             truckingOrder: try? truckingOrder.toDomain())
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let deliveredAtDate = dateFormatter.date(from: deliveredAt)
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let scheduledDeliveryOnDate = dateFormatter.date(from: scheduledDeliveryOn)
+        
+        return Trip(typename: typename,
+                    id: id,
+                    deliveryStatus: deliveryStatus,
+                    progress: progress,
+                    deliveredAt: deliveredAtDate,
+                    scheduledDeliveryOn: scheduledDeliveryOnDate,
+                    truckingOrder: try? truckingOrder.toDomain())
     }
 }

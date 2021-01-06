@@ -26,4 +26,15 @@ extension TripsProvider: TripsProviderContract {
         }
         
     }
+    
+    public func getTripsListMocked() -> [Trip] {
+        let bundle = Bundle(for: type(of: self))
+        guard let url = bundle.url(forResource: "Trips", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let welcomeEntity = try? JSONDecoder().decode(WelcomeEntity.self, from: data),
+              let welcomeModel = try? welcomeEntity.toDomain() else {
+            fatalError("Could not load file")
+        }
+        return welcomeModel.data?.driver?.loads?.trips ?? []
+    }
 }

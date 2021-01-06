@@ -3,13 +3,16 @@ import Domain
 final class TripsListPresenter {
     private weak var view: TripsListViewContract?
     private let getTripsListUseCase: GetTripsListUseCaseContract
+    private let getTripsListMockedUseCase: GetTripsListMockedUseCaseContract
     
     var trips: [Trip] = []
     
     public init(view: TripsListViewContract?,
-                getTripsListUseCase: GetTripsListUseCaseContract) {
+                getTripsListUseCase: GetTripsListUseCaseContract,
+                getTripsListMockedUseCase: GetTripsListMockedUseCaseContract) {
         self.view = view
         self.getTripsListUseCase = getTripsListUseCase
+        self.getTripsListMockedUseCase = getTripsListMockedUseCase
     }
 }
 
@@ -21,7 +24,18 @@ extension TripsListPresenter: TripsListPresenterContract {
                 self.trips = trips
                 self.view?.renderTrips(trips.map { TripTableViewModel(trip: $0) })
             }).catch { _ in
-                self.view?.showError()
+                self.mockData()
+//                self.view?.showError()
             }
+    }
+}
+
+// MARK: - Private Methods
+private extension TripsListPresenter {
+    // WARNING:
+    // During development, the Auth service kept failing, so development had to continue with mocking response
+    func mockData() {
+        let trips = getTripsListMockedUseCase.execute()
+        view?.renderTrips(trips.map { TripTableViewModel(trip: $0) })
     }
 }

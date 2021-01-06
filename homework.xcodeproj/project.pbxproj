@@ -67,11 +67,13 @@
 		D406649A25A60E4F0090E143 /* TripsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406649925A60E4F0090E143 /* TripsTests.swift */; };
 		D46CC88E25A63E030062E288 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC88C25A63E030062E288 /* TripTableViewCell.swift */; };
 		D46CC88F25A63E030062E288 /* TripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D46CC88D25A63E030062E288 /* TripTableViewCell.xib */; };
-		D46CC89C25A6464D0062E288 /* homeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC89B25A6464D0062E288 /* homeworkTests.swift */; };
 		D46CC8C025A646B50062E288 /* TripsListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC8BF25A646B50062E288 /* TripsListPresenterTests.swift */; };
 		D46CC8CA25A649C00062E288 /* Trips.json in Resources */ = {isa = PBXBuildFile; fileRef = D46CC8C825A649C00062E288 /* Trips.json */; };
 		D46CC90C25A659C00062E288 /* TripsListViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC90B25A659C00062E288 /* TripsListViewMock.swift */; };
 		D46CC91425A659FC0062E288 /* GetTripsListUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC91325A659FC0062E288 /* GetTripsListUseCaseMock.swift */; };
+		D46CC91D25A65B930062E288 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC91C25A65B930062E288 /* URLSessionMock.swift */; };
+		D46CC92C25A65EFC0062E288 /* Trips.json in Resources */ = {isa = PBXBuildFile; fileRef = D46CC92B25A65EFC0062E288 /* Trips.json */; };
+		D46CC93425A65FA70062E288 /* GetTripsListMockedUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC93325A65FA70062E288 /* GetTripsListMockedUseCase.swift */; };
 		D4A5DE7125A6345D00C05191 /* TripsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A5DE7025A6345D00C05191 /* TripsList.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -223,12 +225,14 @@
 		D46CC88C25A63E030062E288 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 		D46CC88D25A63E030062E288 /* TripTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripTableViewCell.xib; sourceTree = "<group>"; };
 		D46CC89925A6464D0062E288 /* homeworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = homeworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D46CC89B25A6464D0062E288 /* homeworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeworkTests.swift; sourceTree = "<group>"; };
 		D46CC89D25A6464D0062E288 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D46CC8BF25A646B50062E288 /* TripsListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListPresenterTests.swift; sourceTree = "<group>"; };
 		D46CC8C825A649C00062E288 /* Trips.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trips.json; sourceTree = "<group>"; };
 		D46CC90B25A659C00062E288 /* TripsListViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListViewMock.swift; sourceTree = "<group>"; };
 		D46CC91325A659FC0062E288 /* GetTripsListUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripsListUseCaseMock.swift; sourceTree = "<group>"; };
+		D46CC91C25A65B930062E288 /* URLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		D46CC92B25A65EFC0062E288 /* Trips.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trips.json; sourceTree = "<group>"; };
+		D46CC93325A65FA70062E288 /* GetTripsListMockedUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripsListMockedUseCase.swift; sourceTree = "<group>"; };
 		D4A5DE7025A6345D00C05191 /* TripsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsList.storyboard; sourceTree = "<group>"; };
 		E458EF109D2F742E61E13280 /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E481068A30795E1477C1273A /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -335,6 +339,7 @@
 		66AB47D6243D1570000508FB /* homework */ = {
 			isa = PBXGroup;
 			children = (
+				D46CC91B25A65B930062E288 /* Mocks */,
 				D406616025A3D4F50090E143 /* Modules */,
 				66AB47D7243D1570000508FB /* AppDelegate.swift */,
 				66AB47E0243D1572000508FB /* Assets.xcassets */,
@@ -424,6 +429,7 @@
 		D406620325A504840090E143 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D46CC92A25A65EFC0062E288 /* JSONS */,
 				D406632325A51AD50090E143 /* Helpers */,
 				D406624C25A50B0E0090E143 /* Bridge */,
 				D406624F25A50B0E0090E143 /* Internal */,
@@ -565,6 +571,7 @@
 			isa = PBXGroup;
 			children = (
 				D406635C25A5EB970090E143 /* GetTripsListUseCase.swift */,
+				D46CC93325A65FA70062E288 /* GetTripsListMockedUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -617,7 +624,6 @@
 			children = (
 				D46CC8C725A649C00062E288 /* JSONS */,
 				D46CC8C925A649C00062E288 /* Mocks */,
-				D46CC89B25A6464D0062E288 /* homeworkTests.swift */,
 				D46CC89D25A6464D0062E288 /* Info.plist */,
 				D46CC8BF25A646B50062E288 /* TripsListPresenterTests.swift */,
 			);
@@ -639,6 +645,22 @@
 				D46CC91325A659FC0062E288 /* GetTripsListUseCaseMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D46CC91B25A65B930062E288 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D46CC91C25A65B930062E288 /* URLSessionMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D46CC92A25A65EFC0062E288 /* JSONS */ = {
+			isa = PBXGroup;
+			children = (
+				D46CC92B25A65EFC0062E288 /* Trips.json */,
+			);
+			path = JSONS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -890,6 +912,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46CC92C25A65EFC0062E288 /* Trips.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1090,6 +1113,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46CC91D25A65B930062E288 /* URLSessionMock.swift in Sources */,
 				66AB47D8243D1570000508FB /* AppDelegate.swift in Sources */,
 				D400F2CE25A6302500450BB8 /* TripsListPresenter.swift in Sources */,
 				D400F2B525A62F1D00450BB8 /* TripsListViewController.swift in Sources */,
@@ -1142,6 +1166,7 @@
 				D406630225A51A780090E143 /* TruckingOrder.swift in Sources */,
 				D40662EA25A51A590090E143 /* DataClass.swift in Sources */,
 				D40662E425A51A510090E143 /* Welcome.swift in Sources */,
+				D46CC93425A65FA70062E288 /* GetTripsListMockedUseCase.swift in Sources */,
 				D406631E25A51AA20090E143 /* Coordinates.swift in Sources */,
 				D406631825A51A970090E143 /* Address.swift in Sources */,
 				D406631225A51A8F0090E143 /* Location.swift in Sources */,
@@ -1169,7 +1194,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D46CC89C25A6464D0062E288 /* homeworkTests.swift in Sources */,
 				D46CC91425A659FC0062E288 /* GetTripsListUseCaseMock.swift in Sources */,
 				D46CC8C025A646B50062E288 /* TripsListPresenterTests.swift in Sources */,
 				D46CC90C25A659C00062E288 /* TripsListViewMock.swift in Sources */,

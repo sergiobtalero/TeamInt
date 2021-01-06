@@ -5,6 +5,10 @@ public final class Injector {
     public static func provideGetTripsListUseCase() -> GetTripsListUseCaseContract {
         return GetTripsListUseCase(provider: provideTripProvider())
     }
+    
+    public static func provideGetTripsListMockedUseCase() -> GetTripsListMockedUseCaseContract {
+        return GetTripsListMockedUseCase(provider: provideTripProvider())
+    }
 }
 
 // MARK: - Private Injector Methods
