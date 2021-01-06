@@ -19,4 +19,16 @@ end
 
 target 'Domain' do
 	pod "PromiseKit", "~> 6.8"
+
+	target 'DomainTests' do
+    inherit! :search_paths
+  end
+end
+
+post_install do |pi|
+    pi.pods_project.targets.each do |t|
+      t.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.2'
+      end
+    end
 end
