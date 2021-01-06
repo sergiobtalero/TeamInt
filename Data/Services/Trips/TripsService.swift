@@ -4,7 +4,7 @@ enum TripsService {
     case list(token: String)
 }
 
-extension TripsService: ServiceContract {
+extension TripsService: ServiceContract {    
     var baseURL: String {
         Constants.apiURL.absoluteString
     }

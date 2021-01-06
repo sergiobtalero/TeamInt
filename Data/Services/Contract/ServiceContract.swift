@@ -1,4 +1,5 @@
 import Foundation
+import PromiseKit
 
 typealias URLSessionResponse = (Data?, URLResponse?, Error?) -> Void
 
@@ -27,30 +28,30 @@ public protocol ServiceContract {
     var headers: [String: String]? { get }
     var httpMethod:HttpMethod { get }
     
-    func execute<T: Codable>(session: URLSession,
-                             completion: @escaping (Result<T?, Error>) -> Void)
+    func execute<T: Codable>(session: URLSession) -> Promise<T?>
 }
 
 extension ServiceContract {
-    public func execute<T: Codable>(session: URLSession = URLSession.shared,
-                                    completion: @escaping (Result<T?, Error>) -> Void) {
-        guard let request = urlRequest else {
-            completion(.failure(APINetworkError.invalidRequest))
-            return
-        }
-        
-        let task = session.dataTask(with: request) { (data, _, error) in
-            if error != nil {
-                completion(.failure(APINetworkError.badResponse))
+    func execute<T: Codable>(session: URLSession) -> Promise<T?> {
+        Promise { seal in
+            guard let request = self.urlRequest else {
+                seal.reject(APINetworkError.invalidRequest)
                 return
             }
-            guard let data = data else {
-                completion(.failure(APINetworkError.invalidData))
-                return
+            
+            let task = session.dataTask(with: request) { (data, _, error) in
+                if error != nil {
+                    seal.reject(APINetworkError.badResponse)
+                    return
+                }
+                guard let data = data else {
+                    seal.reject(APINetworkError.invalidData)
+                    return
+                }
+                let objects = try? JSONDecoder().decode(T.self, from: data)
+                seal.fulfill(objects)
             }
-            let objects = try? JSONDecoder().decode(T.self, from: data)
-            completion(.success(objects))
+            task.resume()
         }
-        task.resume()
     }
 }

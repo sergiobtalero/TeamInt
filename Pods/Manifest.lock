@@ -3,22 +3,34 @@ PODS:
     - JWTDecode
     - SimpleKeychain
   - JWTDecode (2.5.0)
+  - PromiseKit (6.13.1):
+    - PromiseKit/CorePromise (= 6.13.1)
+    - PromiseKit/Foundation (= 6.13.1)
+    - PromiseKit/UIKit (= 6.13.1)
+  - PromiseKit/CorePromise (6.13.1)
+  - PromiseKit/Foundation (6.13.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.13.1):
+    - PromiseKit/CorePromise
   - SimpleKeychain (0.12.1)
 
 DEPENDENCIES:
   - Auth0 (~> 1.19)
+  - PromiseKit (~> 6.8)
 
 SPEC REPOS:
   trunk:
     - Auth0
     - JWTDecode
+    - PromiseKit
     - SimpleKeychain
 
 SPEC CHECKSUMS:
   Auth0: 59bece5b578a93589bd321fafeed8a042429f9db
   JWTDecode: d4c176a28a29f7e6f9abf5c90ad3002f69b98c7c
+  PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
   SimpleKeychain: 77443015b0f29005c16f74bf858469a9e9fb05e8
 
-PODFILE CHECKSUM: fbcf1d68cc327352f2610ad3104dd7ba8ca08682
+PODFILE CHECKSUM: 72fb48c727ac445459fdf0301233df2925fa08b2
 
 COCOAPODS: 1.10.0
