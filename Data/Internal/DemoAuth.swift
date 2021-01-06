@@ -46,37 +46,4 @@ extension DemoAuthClient {
     func token(then completion: @escaping (String?) -> Void) {
         login(email: username, password: password, then: completion)
     }
-    
-    func getListOfTrips(with token: String) {
-        
-        var request = URLRequest(url: Constants.apiURL)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "content-type")
-        request.setValue("Bearer \(token)", forHTTPHeaderField: "authorization")
-        if let body = readJSONFromFile(fileName: "request_body") {
-            request.httpBody = body
-        }
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data else {
-                return
-            }
-            
-            let result = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-            print(result)
-        }
-        task.resume()
-    }
-    
-    func readJSONFromFile(fileName: String) -> Data? {
-        if let path = Bundle.main.path(forResource: fileName, ofType: "json") {
-            do {
-                let fileUrl = URL(fileURLWithPath: path)
-                return try Data(contentsOf: fileUrl, options: .mappedIfSafe)
-            } catch {
-                return nil
-            }
-        }
-        return nil
-    }
 }
