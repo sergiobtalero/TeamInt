@@ -9,6 +9,7 @@ final class TripsListViewController: UIViewController {
     
     // MARK: - IBOutlets and properties
     @IBOutlet private weak var tableView: UITableView!
+    private var refreshControl = UIRefreshControl()
     
     private var tripsViewModels: [TripTableViewModel] = []
     
@@ -42,6 +43,14 @@ private extension TripsListViewController {
         let nib = UINib(nibName: "TripTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "TripTableViewCell")
         tableView.dataSource = self
+        
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+    }
+    
+    @objc
+    func refresh(_ sender: AnyObject) {
+        presenter.fetchData()
     }
 }
 
@@ -60,11 +69,12 @@ extension TripsListViewController: UITableViewDataSource {
 // MARK: - TripsListViewContract
 extension TripsListViewController: TripsListViewContract {
     func renderTrips(_ tripsViewModels: [TripTableViewModel]) {
+        refreshControl.endRefreshing()
         self.tripsViewModels = tripsViewModels
         tableView.reloadData()
     }
     
+    // TODO: - Define Error behavior
     func showError() {
-        print("OOOOOPPPPSSSS")
     }
 }
