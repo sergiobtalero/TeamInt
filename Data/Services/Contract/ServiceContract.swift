@@ -28,11 +28,11 @@ public protocol ServiceContract {
     var headers: [String: String]? { get }
     var httpMethod:HttpMethod { get }
     
-    func execute<T: Codable>(session: URLSession) -> Promise<T?>
+    func execute<T: Codable>(session: URLSession, object: T.Type) -> Promise<T>
 }
 
 extension ServiceContract {
-    func execute<T: Codable>(session: URLSession) -> Promise<T?> {
+    func execute<T: Codable>(session: URLSession = URLSession.shared, object: T.Type) -> Promise<T> {
         Promise { seal in
             guard let request = self.urlRequest else {
                 seal.reject(APINetworkError.invalidRequest)
@@ -48,8 +48,11 @@ extension ServiceContract {
                     seal.reject(APINetworkError.invalidData)
                     return
                 }
-                let objects = try? JSONDecoder().decode(T.self, from: data)
-                seal.fulfill(objects)
+                if let objects = try? JSONDecoder().decode(T.self, from: data) {
+                    seal.fulfill(objects)
+                } else {
+                    seal.reject(APINetworkError.badResponse)
+                }
             }
             task.resume()
         }

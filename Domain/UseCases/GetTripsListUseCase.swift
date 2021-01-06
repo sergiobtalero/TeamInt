@@ -1,5 +1,11 @@
+import PromiseKit
+
 public protocol GetTripsListUseCaseContract {
-    func execute(completion: @escaping(_: [Trip]?) -> Void)
+    func execute() -> Promise<[Trip]>
+}
+
+public enum GetTripsListUseCaseError: Error {
+    case generic
 }
 
 public final class GetTripsListUseCase {
@@ -10,13 +16,13 @@ public final class GetTripsListUseCase {
     }
 }
 
+// MARK: - GetTripsListUseCaseContract
 extension GetTripsListUseCase: GetTripsListUseCaseContract {
-    public func execute(completion: @escaping ([Trip]?) -> Void) {
-        provider.getTripsList { trips in
-            if let trips = trips {
-                completion(trips)
-            }
-        }
+    public func execute() -> Promise<[Trip]> {
+        return provider.getTripsList()
+            .recover ({ _ -> Promise<[Trip]> in
+                throw GetTripsListUseCaseError.generic
+            })
     }
 }
 

@@ -8,8 +8,11 @@ class ListViewController: UIViewController {
         super.viewDidLoad()
 
         let getTripsListUseCase = Injector.provideGetTripsListUseCase()
-        getTripsListUseCase.execute { trips in
+
+        getTripsListUseCase.execute().done { trips in
             print(trips)
+        }.catch { error in
+            print(error.localizedDescription)
         }
     }
 }

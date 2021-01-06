@@ -1,5 +1,9 @@
 import PromiseKit
 
+public enum TripsProviderError: Error {
+    case generic
+}
+
 public protocol TripsProviderContract {
-    func getTripsList(completion: @escaping(_: [Trip]?) -> Void)
+    func getTripsList() -> Promise<[Trip]>
 }

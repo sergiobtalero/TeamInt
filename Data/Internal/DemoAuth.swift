@@ -6,6 +6,7 @@
 //  Copyright © 2020 Indigo. All rights reserved.
 //
 
+import PromiseKit
 import Foundation
 import Auth0
 
@@ -43,7 +44,15 @@ extension DemoAuthClient {
 
 extension DemoAuthClient {
 
-    func token(then completion: @escaping (String?) -> Void) {
-        login(email: username, password: password, then: completion)
+    func token() -> Promise<String> {
+        Promise { seal in
+            login(email: username, password: password) { token in
+                if let token = token {
+                    seal.fulfill(token)
+                } else {
+                    seal.reject(AuthError.invalidToken)
+                }
+            }
+        }
     }
 }

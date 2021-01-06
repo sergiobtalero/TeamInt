@@ -6,6 +6,7 @@
 //  Copyright © 2020 Indigo. All rights reserved.
 //
 
+import PromiseKit
 import Foundation
 
 protocol Auth {
@@ -13,7 +14,11 @@ protocol Auth {
     /// Gets back an auth token for connecting to the service
     /// This token should then be set as the authorization header on requests to the apiURL endpoint, as outlined in the README
     /// - Parameter completion: Callback with the active token
-    func token(then completion: @escaping (String?) -> Void)
+    func token() -> Promise<String>
+}
+
+enum AuthError: Error {
+    case invalidToken
 }
 
 class DemoAuthClient: Auth { }
