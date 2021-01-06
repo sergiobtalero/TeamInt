@@ -18,8 +18,9 @@
 		D400F29225A6290E00450BB8 /* Trips.json in Resources */ = {isa = PBXBuildFile; fileRef = D400F29125A6290E00450BB8 /* Trips.json */; };
 		D400F2A425A6295E00450BB8 /* GetTripsListUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400F2A325A6295E00450BB8 /* GetTripsListUseCaseTests.swift */; };
 		D400F2AB25A62D5A00450BB8 /* TripsProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400F2AA25A62D5A00450BB8 /* TripsProviderMock.swift */; };
-		D406616325A3D5220090E143 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D406616225A3D5220090E143 /* List.storyboard */; };
-		D406616625A3D53B0090E143 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406616525A3D53B0090E143 /* ListViewController.swift */; };
+		D400F2B525A62F1D00450BB8 /* TripsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400F2B325A62F1D00450BB8 /* TripsListViewController.swift */; };
+		D400F2C225A62F9600450BB8 /* TripsListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400F2C125A62F9600450BB8 /* TripsListContract.swift */; };
+		D400F2CE25A6302500450BB8 /* TripsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400F2CD25A6302500450BB8 /* TripsListPresenter.swift */; };
 		D406620B25A504840090E143 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D406620225A504840090E143 /* Data.framework */; };
 		D406621425A504840090E143 /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = D406620425A504840090E143 /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D406621725A504840090E143 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D406620225A504840090E143 /* Data.framework */; };
@@ -63,6 +64,9 @@
 		D406646F25A60D350090E143 /* Trips.json in Resources */ = {isa = PBXBuildFile; fileRef = D406646E25A60D340090E143 /* Trips.json */; };
 		D406648225A60E070090E143 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406648125A60E070090E143 /* URLSessionMock.swift */; };
 		D406649A25A60E4F0090E143 /* TripsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406649925A60E4F0090E143 /* TripsTests.swift */; };
+		D46CC88E25A63E030062E288 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC88C25A63E030062E288 /* TripTableViewCell.swift */; };
+		D46CC88F25A63E030062E288 /* TripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D46CC88D25A63E030062E288 /* TripTableViewCell.xib */; };
+		D4A5DE7125A6345D00C05191 /* TripsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A5DE7025A6345D00C05191 /* TripsList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,8 +157,9 @@
 		D400F2A225A6295E00450BB8 /* DomainTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DomainTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D400F2A325A6295E00450BB8 /* GetTripsListUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripsListUseCaseTests.swift; sourceTree = "<group>"; };
 		D400F2AA25A62D5A00450BB8 /* TripsProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsProviderMock.swift; sourceTree = "<group>"; };
-		D406616225A3D5220090E143 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
-		D406616525A3D53B0090E143 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		D400F2B325A62F1D00450BB8 /* TripsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsListViewController.swift; sourceTree = "<group>"; };
+		D400F2C125A62F9600450BB8 /* TripsListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListContract.swift; sourceTree = "<group>"; };
+		D400F2CD25A6302500450BB8 /* TripsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListPresenter.swift; sourceTree = "<group>"; };
 		D406620225A504840090E143 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D406620425A504840090E143 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		D406620525A504840090E143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -199,6 +204,9 @@
 		D406646E25A60D340090E143 /* Trips.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Trips.json; sourceTree = "<group>"; };
 		D406648125A60E070090E143 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		D406649925A60E4F0090E143 /* TripsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTests.swift; sourceTree = "<group>"; };
+		D46CC88C25A63E030062E288 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
+		D46CC88D25A63E030062E288 /* TripTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripTableViewCell.xib; sourceTree = "<group>"; };
+		D4A5DE7025A6345D00C05191 /* TripsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsList.storyboard; sourceTree = "<group>"; };
 		E458EF109D2F742E61E13280 /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E481068A30795E1477C1273A /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED094279F9B25C36F85946E4 /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
@@ -349,21 +357,32 @@
 			path = JSONS;
 			sourceTree = "<group>";
 		};
+		D400F2B125A62F1D00450BB8 /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				D400F2B225A62F1D00450BB8 /* List */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
+		D400F2B225A62F1D00450BB8 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				D46CC88B25A63DDF0062E288 /* Views */,
+				D400F2B325A62F1D00450BB8 /* TripsListViewController.swift */,
+				D400F2C125A62F9600450BB8 /* TripsListContract.swift */,
+				D400F2CD25A6302500450BB8 /* TripsListPresenter.swift */,
+				D4A5DE7025A6345D00C05191 /* TripsList.storyboard */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
 		D406616025A3D4F50090E143 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				D406616125A3D50B0090E143 /* List */,
+				D400F2B125A62F1D00450BB8 /* Trips */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		D406616125A3D50B0090E143 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				D406616225A3D5220090E143 /* List.storyboard */,
-				D406616525A3D53B0090E143 /* ListViewController.swift */,
-			);
-			path = List;
 			sourceTree = "<group>";
 		};
 		D406620325A504840090E143 /* Data */ = {
@@ -546,6 +565,15 @@
 				D406648125A60E070090E143 /* URLSessionMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D46CC88B25A63DDF0062E288 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D46CC88C25A63E030062E288 /* TripTableViewCell.swift */,
+				D46CC88D25A63E030062E288 /* TripTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -762,8 +790,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				66AB47E4243D1572000508FB /* LaunchScreen.storyboard in Resources */,
+				D4A5DE7125A6345D00C05191 /* TripsList.storyboard in Resources */,
 				66AB47E1243D1572000508FB /* Assets.xcassets in Resources */,
-				D406616325A3D5220090E143 /* List.storyboard in Resources */,
+				D46CC88F25A63E030062E288 /* TripTableViewCell.xib in Resources */,
 				40119F21245B7C0500D97CB3 /* request_body.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -943,7 +972,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				66AB47D8243D1570000508FB /* AppDelegate.swift in Sources */,
-				D406616625A3D53B0090E143 /* ListViewController.swift in Sources */,
+				D400F2CE25A6302500450BB8 /* TripsListPresenter.swift in Sources */,
+				D400F2B525A62F1D00450BB8 /* TripsListViewController.swift in Sources */,
+				D400F2C225A62F9600450BB8 /* TripsListContract.swift in Sources */,
+				D46CC88E25A63E030062E288 /* TripTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,10 +10,6 @@ import PromiseKit
 import Foundation
 
 protocol Auth {
-
-    /// Gets back an auth token for connecting to the service
-    /// This token should then be set as the authorization header on requests to the apiURL endpoint, as outlined in the README
-    /// - Parameter completion: Callback with the active token
     func token() -> Promise<String>
 }
 
