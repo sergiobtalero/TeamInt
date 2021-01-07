@@ -18,21 +18,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="juX-hh-FL6">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="91" width="414" height="805"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NPM-bY-9dF">
+                                <rect key="frame" x="95.5" y="52" width="223" height="32"/>
+                                <segments>
+                                    <segment title="Order By name"/>
+                                    <segment title="Order by ID"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didTapSegmentedControlTab:" destination="B6G-x9-gH1" eventType="valueChanged" id="3Cl-hz-7MQ"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3hy-Yb-31h"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="juX-hh-FL6" firstAttribute="top" secondItem="NPM-bY-9dF" secondAttribute="bottom" constant="8" id="09g-Qz-fmy"/>
+                            <constraint firstItem="NPM-bY-9dF" firstAttribute="centerX" secondItem="L8L-y3-Tlq" secondAttribute="centerX" id="E1F-0F-fRc"/>
                             <constraint firstItem="juX-hh-FL6" firstAttribute="leading" secondItem="L8L-y3-Tlq" secondAttribute="leading" id="X7j-kY-SMo"/>
                             <constraint firstAttribute="trailing" secondItem="juX-hh-FL6" secondAttribute="trailing" id="cyD-hx-zz7"/>
-                            <constraint firstItem="juX-hh-FL6" firstAttribute="top" secondItem="L8L-y3-Tlq" secondAttribute="top" id="evJ-1S-Vvh"/>
                             <constraint firstAttribute="bottom" secondItem="juX-hh-FL6" secondAttribute="bottom" id="fHp-Ph-8Ep"/>
+                            <constraint firstItem="NPM-bY-9dF" firstAttribute="top" secondItem="3hy-Yb-31h" secondAttribute="top" constant="8" id="t2m-6c-e3N"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Trips" id="IrL-H9-0Qn"/>
                     <connections>
+                        <outlet property="segmentedControl" destination="NPM-bY-9dF" id="ZyY-n6-yzO"/>
                         <outlet property="tableView" destination="juX-hh-FL6" id="MUG-sm-x38"/>
                     </connections>
                 </viewController>

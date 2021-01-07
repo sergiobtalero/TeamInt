@@ -1,11 +1,14 @@
 @testable import homework
 
 final class TripsListViewMock: TripsListViewContract {
-    var tripsViewModels: [TripTableViewModel] = []
     var shouldShowError: Bool = false
+    var orderedTripsByNameViewModels: [TripTableViewModel] = []
+    var orderedTripsByIDViewModels: [TripTableViewModel] = []
     
-    func renderTrips(_ tripsViewModels: [TripTableViewModel]) {
-        self.tripsViewModels = tripsViewModels
+    
+    func renderTrips(orderedByName: [TripTableViewModel], orderedByID: [TripTableViewModel]) {
+        orderedTripsByNameViewModels = orderedByName
+        orderedTripsByIDViewModels = orderedByID
     }
     
     func showError() {

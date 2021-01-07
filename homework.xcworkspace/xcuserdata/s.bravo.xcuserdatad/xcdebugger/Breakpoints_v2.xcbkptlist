@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BB154BE1-B74F-4779-A0FB-FBAFA1AE43BE"
+            uuid = "0DD1C4E4-08D8-474A-8951-72CDFAC23A17"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "homework/Modules/Trips/List/TripsListPresenter.swift"
+            filePath = "homework/Modules/Trips/List/TripsListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "getTripsViewModels(from:)"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "getViewModelsToRender()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

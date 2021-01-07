@@ -9,9 +9,11 @@ final class TripsListViewController: UIViewController {
     
     // MARK: - IBOutlets and properties
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var segmentedControl: UISegmentedControl!
     private var refreshControl = UIRefreshControl()
     
-    private var tripsViewModels: [TripTableViewModel] = []
+    private var orderedTripsByNameViewModels: [TripTableViewModel] = []
+    private var orderedTripsByIDViewModels: [TripTableViewModel] = []
     
     // MARK: - Presenter
     private lazy var presenter: TripsListPresenterContract = {
@@ -30,6 +32,10 @@ final class TripsListViewController: UIViewController {
         setupTableView()
         presenter.fetchData()
     }
+    
+    @IBAction private func didTapSegmentedControlTab(_ sender: Any) {
+        tableView.reloadData()
+    }
 }
 
 // MARK: - Private Methods
@@ -37,11 +43,6 @@ private extension TripsListViewController {
     func setupView() {
         title = ViewConstants.screenTitle
         navigationController?.navigationBar.barTintColor = .signatureBlue
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter",
-                                                            style: .plain,
-                                                            target: self,
-                                                            action: #selector(didTapFilterButton(_:)))
-        navigationItem.rightBarButtonItem?.tintColor = .black
     }
     
     func setupTableView() {
@@ -58,29 +59,29 @@ private extension TripsListViewController {
         presenter.fetchData()
     }
     
-    @objc
-    func didTapFilterButton(_ sender: AnyObject) {
-        
+    func getViewModelsToRender() -> [TripTableViewModel] {
+        return segmentedControl.selectedSegmentIndex == 0 ? orderedTripsByNameViewModels : orderedTripsByIDViewModels
     }
 }
 
 // MARK: - UITableViewDataSource
 extension TripsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tripsViewModels.count
+        getViewModelsToRender().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let viewModel = tripsViewModels[indexPath.row]
+        let viewModel = getViewModelsToRender()[indexPath.row]
         return viewModel.fill(on: tableView)
     }
 }
 
 // MARK: - TripsListViewContract
 extension TripsListViewController: TripsListViewContract {
-    func renderTrips(_ tripsViewModels: [TripTableViewModel]) {
+    func renderTrips(orderedByName: [TripTableViewModel], orderedByID: [TripTableViewModel]) {
         refreshControl.endRefreshing()
-        self.tripsViewModels = tripsViewModels
+        orderedTripsByIDViewModels = orderedByID
+        orderedTripsByNameViewModels = orderedByName
         tableView.reloadData()
     }
     
