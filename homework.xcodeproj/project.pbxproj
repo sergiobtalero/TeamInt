@@ -9,19 +9,12 @@
 /* Begin PBXBuildFile section */
 		1A4E2699559D78F074FDE673 /* Pods_homework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C9A060D78DCD0564DE3255 /* Pods_homework.framework */; };
 		3F42F34062C1824462CEE226 /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E481068A30795E1477C1273A /* Pods_DomainTests.framework */; };
-		40119F21245B7C0500D97CB3 /* request_body.json in Resources */ = {isa = PBXBuildFile; fileRef = 40119F20245B7C0500D97CB3 /* request_body.json */; };
 		488800B201270E3BCF8A9911 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1741C03220FFAA84B63153A1 /* Pods_Domain.framework */; };
 		4C3E95D080A3CDEF32408034 /* Pods_homeworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B231E60E538FCC54EA4A8FA /* Pods_homeworkTests.framework */; };
-		66AB47D8243D1570000508FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AB47D7243D1570000508FB /* AppDelegate.swift */; };
-		66AB47E1243D1572000508FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66AB47E0243D1572000508FB /* Assets.xcassets */; };
-		66AB47E4243D1572000508FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66AB47E2243D1572000508FB /* LaunchScreen.storyboard */; };
 		C00CD05D36F5C99AB3B89B73 /* Pods_DataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46498E94AD84D3C69E8A9BFA /* Pods_DataTests.framework */; };
 		D400F29225A6290E00450BB8 /* Trips.json in Resources */ = {isa = PBXBuildFile; fileRef = D400F29125A6290E00450BB8 /* Trips.json */; };
 		D400F2A425A6295E00450BB8 /* GetTripsListUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400F2A325A6295E00450BB8 /* GetTripsListUseCaseTests.swift */; };
 		D400F2AB25A62D5A00450BB8 /* TripsProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400F2AA25A62D5A00450BB8 /* TripsProviderMock.swift */; };
-		D400F2B525A62F1D00450BB8 /* TripsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400F2B325A62F1D00450BB8 /* TripsListViewController.swift */; };
-		D400F2C225A62F9600450BB8 /* TripsListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400F2C125A62F9600450BB8 /* TripsListContract.swift */; };
-		D400F2CE25A6302500450BB8 /* TripsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400F2CD25A6302500450BB8 /* TripsListPresenter.swift */; };
 		D406620B25A504840090E143 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D406620225A504840090E143 /* Data.framework */; };
 		D406621425A504840090E143 /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = D406620425A504840090E143 /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D406621725A504840090E143 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D406620225A504840090E143 /* Data.framework */; };
@@ -65,15 +58,24 @@
 		D406646F25A60D350090E143 /* Trips.json in Resources */ = {isa = PBXBuildFile; fileRef = D406646E25A60D340090E143 /* Trips.json */; };
 		D406648225A60E070090E143 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406648125A60E070090E143 /* URLSessionMock.swift */; };
 		D406649A25A60E4F0090E143 /* TripsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406649925A60E4F0090E143 /* TripsTests.swift */; };
-		D46CC88E25A63E030062E288 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC88C25A63E030062E288 /* TripTableViewCell.swift */; };
-		D46CC88F25A63E030062E288 /* TripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D46CC88D25A63E030062E288 /* TripTableViewCell.xib */; };
 		D46CC8C025A646B50062E288 /* TripsListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC8BF25A646B50062E288 /* TripsListPresenterTests.swift */; };
 		D46CC8CA25A649C00062E288 /* Trips.json in Resources */ = {isa = PBXBuildFile; fileRef = D46CC8C825A649C00062E288 /* Trips.json */; };
 		D46CC90C25A659C00062E288 /* TripsListViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC90B25A659C00062E288 /* TripsListViewMock.swift */; };
 		D46CC91425A659FC0062E288 /* GetTripsListUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC91325A659FC0062E288 /* GetTripsListUseCaseMock.swift */; };
 		D46CC92C25A65EFC0062E288 /* Trips.json in Resources */ = {isa = PBXBuildFile; fileRef = D46CC92B25A65EFC0062E288 /* Trips.json */; };
 		D46CC93425A65FA70062E288 /* GetTripsListMockedUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC93325A65FA70062E288 /* GetTripsListMockedUseCase.swift */; };
-		D4A5DE7125A6345D00C05191 /* TripsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A5DE7025A6345D00C05191 /* TripsList.storyboard */; };
+		D46CC96D25A69C300062E288 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46CC95925A69C2F0062E288 /* LaunchScreen.storyboard */; };
+		D46CC96E25A69C300062E288 /* TripsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46CC95E25A69C2F0062E288 /* TripsList.storyboard */; };
+		D46CC96F25A69C300062E288 /* TripsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC95F25A69C2F0062E288 /* TripsListViewController.swift */; };
+		D46CC97025A69C300062E288 /* TripsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC96025A69C2F0062E288 /* TripsListPresenter.swift */; };
+		D46CC97125A69C300062E288 /* TripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D46CC96225A69C2F0062E288 /* TripTableViewCell.xib */; };
+		D46CC97225A69C300062E288 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC96325A69C2F0062E288 /* TripTableViewCell.swift */; };
+		D46CC97325A69C300062E288 /* TripsListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC96425A69C2F0062E288 /* TripsListContract.swift */; };
+		D46CC97525A69C300062E288 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC96825A69C300062E288 /* AppDelegate.swift */; };
+		D46CC99425A69DD50062E288 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D46CC99125A69DD40062E288 /* Assets.xcassets */; };
+		D46CC99525A69DD50062E288 /* request_body.json in Resources */ = {isa = PBXBuildFile; fileRef = D46CC99325A69DD50062E288 /* request_body.json */; };
+		D46CC99F25A69E0A0062E288 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D46CC99E25A69E0A0062E288 /* Colors.xcassets */; };
+		D46CC9A825A69EC30062E288 /* Colors+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC9A725A69EC30062E288 /* Colors+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,15 +159,10 @@
 		1B231E60E538FCC54EA4A8FA /* Pods_homeworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_homeworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1CE6E133CA237FF0110BCD /* Pods-Data.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Data.release.xcconfig"; path = "Target Support Files/Pods-Data/Pods-Data.release.xcconfig"; sourceTree = "<group>"; };
 		332FBFDD2D835B231C6537C6 /* Pods-homework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-homework.release.xcconfig"; path = "Target Support Files/Pods-homework/Pods-homework.release.xcconfig"; sourceTree = "<group>"; };
-		40119F20245B7C0500D97CB3 /* request_body.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = request_body.json; sourceTree = "<group>"; };
 		46498E94AD84D3C69E8A9BFA /* Pods_DataTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55725DB31438FD385A0A6F2A /* Pods-DataTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataTests.debug.xcconfig"; path = "Target Support Files/Pods-DataTests/Pods-DataTests.debug.xcconfig"; sourceTree = "<group>"; };
 		637ADC7ADAA41BA9D684EE37 /* Pods-homeworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-homeworkTests.debug.xcconfig"; path = "Target Support Files/Pods-homeworkTests/Pods-homeworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		66AB47D4243D1570000508FB /* homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		66AB47D7243D1570000508FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		66AB47E0243D1572000508FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		66AB47E3243D1572000508FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		66AB47E5243D1572000508FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CC5F16DC2553E39A4968A81 /* Pods-homeworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-homeworkTests.release.xcconfig"; path = "Target Support Files/Pods-homeworkTests/Pods-homeworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		A3C9A060D78DCD0564DE3255 /* Pods_homework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_homework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8670A78E5E8DA6C9D787D5 /* Pods-homework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-homework.debug.xcconfig"; path = "Target Support Files/Pods-homework/Pods-homework.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,9 +171,6 @@
 		D400F2A225A6295E00450BB8 /* DomainTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DomainTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D400F2A325A6295E00450BB8 /* GetTripsListUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripsListUseCaseTests.swift; sourceTree = "<group>"; };
 		D400F2AA25A62D5A00450BB8 /* TripsProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsProviderMock.swift; sourceTree = "<group>"; };
-		D400F2B325A62F1D00450BB8 /* TripsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsListViewController.swift; sourceTree = "<group>"; };
-		D400F2C125A62F9600450BB8 /* TripsListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListContract.swift; sourceTree = "<group>"; };
-		D400F2CD25A6302500450BB8 /* TripsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListPresenter.swift; sourceTree = "<group>"; };
 		D406620225A504840090E143 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D406620425A504840090E143 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		D406620525A504840090E143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -221,8 +215,6 @@
 		D406646E25A60D340090E143 /* Trips.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Trips.json; sourceTree = "<group>"; };
 		D406648125A60E070090E143 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		D406649925A60E4F0090E143 /* TripsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTests.swift; sourceTree = "<group>"; };
-		D46CC88C25A63E030062E288 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
-		D46CC88D25A63E030062E288 /* TripTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripTableViewCell.xib; sourceTree = "<group>"; };
 		D46CC89925A6464D0062E288 /* homeworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = homeworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46CC89D25A6464D0062E288 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D46CC8BF25A646B50062E288 /* TripsListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListPresenterTests.swift; sourceTree = "<group>"; };
@@ -231,7 +223,19 @@
 		D46CC91325A659FC0062E288 /* GetTripsListUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripsListUseCaseMock.swift; sourceTree = "<group>"; };
 		D46CC92B25A65EFC0062E288 /* Trips.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trips.json; sourceTree = "<group>"; };
 		D46CC93325A65FA70062E288 /* GetTripsListMockedUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTripsListMockedUseCase.swift; sourceTree = "<group>"; };
-		D4A5DE7025A6345D00C05191 /* TripsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsList.storyboard; sourceTree = "<group>"; };
+		D46CC95A25A69C2F0062E288 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D46CC95E25A69C2F0062E288 /* TripsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TripsList.storyboard; sourceTree = "<group>"; };
+		D46CC95F25A69C2F0062E288 /* TripsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsListViewController.swift; sourceTree = "<group>"; };
+		D46CC96025A69C2F0062E288 /* TripsListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsListPresenter.swift; sourceTree = "<group>"; };
+		D46CC96225A69C2F0062E288 /* TripTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TripTableViewCell.xib; sourceTree = "<group>"; };
+		D46CC96325A69C2F0062E288 /* TripTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
+		D46CC96425A69C2F0062E288 /* TripsListContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsListContract.swift; sourceTree = "<group>"; };
+		D46CC96625A69C300062E288 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D46CC96825A69C300062E288 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D46CC99125A69DD40062E288 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D46CC99325A69DD50062E288 /* request_body.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = request_body.json; sourceTree = "<group>"; };
+		D46CC99E25A69E0A0062E288 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		D46CC9A725A69EC30062E288 /* Colors+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Extensions.swift"; sourceTree = "<group>"; };
 		E458EF109D2F742E61E13280 /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E481068A30795E1477C1273A /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED094279F9B25C36F85946E4 /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
@@ -337,12 +341,12 @@
 		66AB47D6243D1570000508FB /* homework */ = {
 			isa = PBXGroup;
 			children = (
-				D406616025A3D4F50090E143 /* Modules */,
-				66AB47D7243D1570000508FB /* AppDelegate.swift */,
-				66AB47E0243D1572000508FB /* Assets.xcassets */,
-				66AB47E2243D1572000508FB /* LaunchScreen.storyboard */,
-				66AB47E5243D1572000508FB /* Info.plist */,
-				40119F20245B7C0500D97CB3 /* request_body.json */,
+				D46CC96725A69C300062E288 /* Base */,
+				D46CC95825A69C2F0062E288 /* Base.lproj */,
+				D46CC96525A69C300062E288 /* Config */,
+				D46CC96925A69C300062E288 /* Extensions */,
+				D46CC95B25A69C2F0062E288 /* Modules */,
+				D46CC96A25A69C300062E288 /* Resources */,
 			);
 			path = homework;
 			sourceTree = "<group>";
@@ -393,34 +397,6 @@
 				D400F29125A6290E00450BB8 /* Trips.json */,
 			);
 			path = JSONS;
-			sourceTree = "<group>";
-		};
-		D400F2B125A62F1D00450BB8 /* Trips */ = {
-			isa = PBXGroup;
-			children = (
-				D400F2B225A62F1D00450BB8 /* List */,
-			);
-			path = Trips;
-			sourceTree = "<group>";
-		};
-		D400F2B225A62F1D00450BB8 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				D46CC88B25A63DDF0062E288 /* Views */,
-				D400F2B325A62F1D00450BB8 /* TripsListViewController.swift */,
-				D400F2C125A62F9600450BB8 /* TripsListContract.swift */,
-				D400F2CD25A6302500450BB8 /* TripsListPresenter.swift */,
-				D4A5DE7025A6345D00C05191 /* TripsList.storyboard */,
-			);
-			path = List;
-			sourceTree = "<group>";
-		};
-		D406616025A3D4F50090E143 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				D400F2B125A62F1D00450BB8 /* Trips */,
-			);
-			path = Modules;
 			sourceTree = "<group>";
 		};
 		D406620325A504840090E143 /* Data */ = {
@@ -607,15 +583,6 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
-		D46CC88B25A63DDF0062E288 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D46CC88C25A63E030062E288 /* TripTableViewCell.swift */,
-				D46CC88D25A63E030062E288 /* TripTableViewCell.xib */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		D46CC89A25A6464D0062E288 /* homeworkTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -650,6 +617,117 @@
 				D46CC92B25A65EFC0062E288 /* Trips.json */,
 			);
 			path = JSONS;
+			sourceTree = "<group>";
+		};
+		D46CC95825A69C2F0062E288 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				D46CC95925A69C2F0062E288 /* LaunchScreen.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		D46CC95B25A69C2F0062E288 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D46CC95C25A69C2F0062E288 /* Trips */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D46CC95C25A69C2F0062E288 /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				D46CC95D25A69C2F0062E288 /* List */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
+		D46CC95D25A69C2F0062E288 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				D46CC96125A69C2F0062E288 /* Views */,
+				D46CC95E25A69C2F0062E288 /* TripsList.storyboard */,
+				D46CC95F25A69C2F0062E288 /* TripsListViewController.swift */,
+				D46CC96025A69C2F0062E288 /* TripsListPresenter.swift */,
+				D46CC96425A69C2F0062E288 /* TripsListContract.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		D46CC96125A69C2F0062E288 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D46CC96225A69C2F0062E288 /* TripTableViewCell.xib */,
+				D46CC96325A69C2F0062E288 /* TripTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D46CC96525A69C300062E288 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D46CC96625A69C300062E288 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		D46CC96725A69C300062E288 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D46CC96825A69C300062E288 /* AppDelegate.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D46CC96925A69C300062E288 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D46CC9A625A69EB40062E288 /* Colors */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D46CC96A25A69C300062E288 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D46CC99225A69DD50062E288 /* API */,
+				D46CC99D25A69DFB0062E288 /* Colors */,
+				D46CC99025A69DD40062E288 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D46CC99025A69DD40062E288 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D46CC99125A69DD40062E288 /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		D46CC99225A69DD50062E288 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D46CC99325A69DD50062E288 /* request_body.json */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		D46CC99D25A69DFB0062E288 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				D46CC99E25A69E0A0062E288 /* Colors.xcassets */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		D46CC9A625A69EB40062E288 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				D46CC9A725A69EC30062E288 /* Colors+Extensions.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -889,11 +967,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66AB47E4243D1572000508FB /* LaunchScreen.storyboard in Resources */,
-				D4A5DE7125A6345D00C05191 /* TripsList.storyboard in Resources */,
-				66AB47E1243D1572000508FB /* Assets.xcassets in Resources */,
-				D46CC88F25A63E030062E288 /* TripTableViewCell.xib in Resources */,
-				40119F21245B7C0500D97CB3 /* request_body.json in Resources */,
+				D46CC97125A69C300062E288 /* TripTableViewCell.xib in Resources */,
+				D46CC96D25A69C300062E288 /* LaunchScreen.storyboard in Resources */,
+				D46CC99425A69DD50062E288 /* Assets.xcassets in Resources */,
+				D46CC99F25A69E0A0062E288 /* Colors.xcassets in Resources */,
+				D46CC96E25A69C300062E288 /* TripsList.storyboard in Resources */,
+				D46CC99525A69DD50062E288 /* request_body.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1102,11 +1181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66AB47D8243D1570000508FB /* AppDelegate.swift in Sources */,
-				D400F2CE25A6302500450BB8 /* TripsListPresenter.swift in Sources */,
-				D400F2B525A62F1D00450BB8 /* TripsListViewController.swift in Sources */,
-				D400F2C225A62F9600450BB8 /* TripsListContract.swift in Sources */,
-				D46CC88E25A63E030062E288 /* TripTableViewCell.swift in Sources */,
+				D46CC97225A69C300062E288 /* TripTableViewCell.swift in Sources */,
+				D46CC96F25A69C300062E288 /* TripsListViewController.swift in Sources */,
+				D46CC97325A69C300062E288 /* TripsListContract.swift in Sources */,
+				D46CC9A825A69EC30062E288 /* Colors+Extensions.swift in Sources */,
+				D46CC97525A69C300062E288 /* AppDelegate.swift in Sources */,
+				D46CC97025A69C300062E288 /* TripsListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1234,10 +1314,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		66AB47E2243D1572000508FB /* LaunchScreen.storyboard */ = {
+		D46CC95925A69C2F0062E288 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				66AB47E3243D1572000508FB /* Base */,
+				D46CC95A25A69C2F0062E288 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1367,7 +1447,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y7D24J646Q;
-				INFOPLIST_FILE = homework/Info.plist;
+				INFOPLIST_FILE = homework/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1387,7 +1467,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y7D24J646Q;
-				INFOPLIST_FILE = homework/Info.plist;
+				INFOPLIST_FILE = homework/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1687,6 +1767,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 637ADC7ADAA41BA9D684EE37 /* Pods-homeworkTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1710,6 +1791,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9CC5F16DC2553E39A4968A81 /* Pods-homeworkTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;

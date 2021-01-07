@@ -2,7 +2,10 @@ import Domain
 import UIKit
 
 struct TripTableViewModel {
-    let trip: Trip
+    let tripName: String
+    let deliveryStatus: String
+    let scheduledDelivery: String
+    let deliveredOnDate: String
     
     func fill(on tableView: UITableView) -> UITableViewCell {
         guard let cell = tableView
@@ -16,8 +19,12 @@ struct TripTableViewModel {
 
 final class TripTableViewCell: UITableViewCell {
     @IBOutlet private weak var tripNameLabel: UILabel!
+    @IBOutlet private weak var deliveredStatusLabel: UILabel!
+    @IBOutlet private weak var scheduledDeliveryLabel: UILabel!
     
     func setup(with viewModel: TripTableViewModel) {
-        tripNameLabel.text = viewModel.trip.typename
+        tripNameLabel.text = viewModel.tripName
+        deliveredStatusLabel.text = viewModel.deliveryStatus
+        scheduledDeliveryLabel.text = viewModel.scheduledDelivery
     }
 }

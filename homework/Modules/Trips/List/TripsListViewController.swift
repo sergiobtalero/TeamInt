@@ -36,7 +36,7 @@ final class TripsListViewController: UIViewController {
 private extension TripsListViewController {
     func setupView() {
         title = ViewConstants.screenTitle
-        navigationController?.navigationBar.barTintColor = UIColor.white
+        navigationController?.navigationBar.barTintColor = .signatureBlue
     }
     
     func setupTableView() {

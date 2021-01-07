@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,42 +12,75 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TripTableViewCell" id="KGk-i7-Jjw" customClass="TripTableViewCell" customModule="homework" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TripTableViewCell" rowHeight="106" id="KGk-i7-Jjw" customClass="TripTableViewCell" customModule="homework" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="106"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="106"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6j-zv-enL">
-                        <rect key="frame" x="106.5" y="11.5" width="201.5" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6j-zv-enL">
+                        <rect key="frame" x="101.5" y="13" width="206.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Trip Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROx-1W-TpL">
-                        <rect key="frame" x="12" y="11.5" width="86.5" height="21"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="DELIVERED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9T-0T-qwB">
+                        <rect key="frame" x="12" y="73.5" width="296" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <color key="textColor" name="SignatureBlue"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" ambiguous="YES" text="Trip Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROx-1W-TpL">
+                        <rect key="frame" x="12" y="11.5" width="81.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                         <color key="textColor" systemColor="systemGrayColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" ambiguous="YES" text="Scheduled Delivery:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qF6-o4-FfH">
+                        <rect key="frame" x="12" y="40.5" width="149.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <color key="textColor" systemColor="systemGrayColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WR9-GQ-Vmx">
+                        <rect key="frame" x="169.5" y="42" width="138.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="y9T-0T-qwB" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="0m7-8t-L9e"/>
+                    <constraint firstItem="y9T-0T-qwB" firstAttribute="top" secondItem="qF6-o4-FfH" secondAttribute="bottom" constant="12" id="1vJ-SL-cz7"/>
+                    <constraint firstItem="WR9-GQ-Vmx" firstAttribute="centerY" secondItem="qF6-o4-FfH" secondAttribute="centerY" id="4Bf-bU-Gto"/>
                     <constraint firstAttribute="trailing" secondItem="N6j-zv-enL" secondAttribute="trailing" constant="12" id="9Qz-aw-7SV"/>
                     <constraint firstItem="ROx-1W-TpL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="FjW-9Z-ATA"/>
-                    <constraint firstItem="ROx-1W-TpL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PCs-OM-1Sn"/>
-                    <constraint firstItem="N6j-zv-enL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="SyZ-JO-x27"/>
+                    <constraint firstItem="WR9-GQ-Vmx" firstAttribute="leading" secondItem="qF6-o4-FfH" secondAttribute="trailing" constant="8" id="P2S-ib-iti"/>
                     <constraint firstItem="N6j-zv-enL" firstAttribute="leading" secondItem="ROx-1W-TpL" secondAttribute="trailing" constant="8" id="UKC-oq-cKM"/>
+                    <constraint firstAttribute="bottom" secondItem="y9T-0T-qwB" secondAttribute="bottom" constant="8" id="Uyg-0j-Vch"/>
+                    <constraint firstItem="N6j-zv-enL" firstAttribute="centerY" secondItem="ROx-1W-TpL" secondAttribute="centerY" id="YGu-yb-ab9"/>
+                    <constraint firstItem="WR9-GQ-Vmx" firstAttribute="trailing" secondItem="N6j-zv-enL" secondAttribute="trailing" id="bQY-PW-o69"/>
+                    <constraint firstItem="ROx-1W-TpL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11.5" id="f1g-rY-EqA"/>
+                    <constraint firstItem="WR9-GQ-Vmx" firstAttribute="centerY" secondItem="qF6-o4-FfH" secondAttribute="centerY" id="gH6-3b-D4T"/>
+                    <constraint firstItem="qF6-o4-FfH" firstAttribute="leading" secondItem="ROx-1W-TpL" secondAttribute="leading" id="qyX-B6-shq"/>
+                    <constraint firstItem="qF6-o4-FfH" firstAttribute="top" secondItem="ROx-1W-TpL" secondAttribute="bottom" constant="8" id="tuR-Nl-VSp"/>
+                    <constraint firstItem="y9T-0T-qwB" firstAttribute="leading" secondItem="ROx-1W-TpL" secondAttribute="leading" id="vKh-sQ-HKW"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="tripNameLabel" destination="N6j-zv-enL" id="8mK-m1-oxX"/>
+                <outlet property="deliveredStatusLabel" destination="y9T-0T-qwB" id="vNo-Qh-5qQ"/>
+                <outlet property="scheduledDeliveryLabel" destination="WR9-GQ-Vmx" id="XU9-Af-jhZ"/>
+                <outlet property="tripNameLabel" destination="N6j-zv-enL" id="SWF-DY-Jg5"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
+            <point key="canvasLocation" x="-318.84057971014494" y="70.982142857142847"/>
         </tableViewCell>
     </objects>
     <resources>
+        <namedColor name="SignatureBlue">
+            <color red="0.10999999940395355" green="0.18000000715255737" blue="0.28999999165534973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

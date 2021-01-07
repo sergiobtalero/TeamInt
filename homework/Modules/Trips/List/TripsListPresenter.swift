@@ -18,11 +18,12 @@ final class TripsListPresenter {
 
 // MARK: - TripsListPresenterContract
 extension TripsListPresenter: TripsListPresenterContract {
+    // TODO: - Remove call to mockData and instead notify view to show error
     func fetchData() {
         getTripsListUseCase.execute()
             .done({ trips in
                 self.trips = trips
-                self.view?.renderTrips(trips.map { TripTableViewModel(trip: $0) })
+                self.view?.renderTrips(self.getTripsViewModels(from: trips))
             }).catch { _ in
                 self.mockData()
 //                self.view?.showError()
@@ -32,13 +33,28 @@ extension TripsListPresenter: TripsListPresenterContract {
 
 // MARK: - Private Methods
 private extension TripsListPresenter {
-    // WARNING:
-    // During development, the Auth service kept failing, so development had to continue with mocking response
+    // WARNING: - Should be removed once the service is available again
     func mockData() {
         if let trips = getTripsListMockedUseCase?.execute() {
-            view?.renderTrips(trips.map { TripTableViewModel(trip: $0) })
+            self.trips = trips
+            view?.renderTrips(getTripsViewModels(from: trips))
         } else {
             view?.showError()
+        }
+    }
+    
+    func getTripsViewModels(from trips: [Trip]) -> [TripTableViewModel] {
+        return trips.map { trip in
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM-dd-yyyy HH:mm"
+            
+            let scheduledDelivery = trip.scheduledDeliveryOn.map { dateFormatter.string(from: $0) } ?? ""
+            let deliveredOnDate = trip.deliveredAt.map { dateFormatter.string(from: $0) } ?? ""
+            
+            return TripTableViewModel(tripName: trip.typename,
+                                      deliveryStatus: trip.deliveryStatus,
+                                      scheduledDelivery: scheduledDelivery,
+                                      deliveredOnDate: deliveredOnDate)
         }
     }
 }
