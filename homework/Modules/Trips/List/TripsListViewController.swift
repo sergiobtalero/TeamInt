@@ -37,6 +37,11 @@ private extension TripsListViewController {
     func setupView() {
         title = ViewConstants.screenTitle
         navigationController?.navigationBar.barTintColor = .signatureBlue
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter",
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(didTapFilterButton(_:)))
+        navigationItem.rightBarButtonItem?.tintColor = .black
     }
     
     func setupTableView() {
@@ -51,6 +56,11 @@ private extension TripsListViewController {
     @objc
     func refresh(_ sender: AnyObject) {
         presenter.fetchData()
+    }
+    
+    @objc
+    func didTapFilterButton(_ sender: AnyObject) {
+        
     }
 }
 
