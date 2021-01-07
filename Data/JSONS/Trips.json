@@ -69,7 +69,7 @@
                         "truckingOrder": {
                             "__typename": "TruckingOrder",
                             "id": "rt0AfPlrq2",
-                            "tripDistanceMiles": 79.6,
+                            "tripDistanceMiles": 89.6,
                             "orderType": "RICE",
                             "locationFrom": {
                                 "__typename": "TruckingLocation",
@@ -231,7 +231,7 @@
                         "truckingOrder": {
                             "__typename": "TruckingOrder",
                             "id": "rt0AfPlrq2",
-                            "tripDistanceMiles": 79.6,
+                            "tripDistanceMiles": 99.6,
                             "orderType": "RICE",
                             "locationFrom": {
                                 "__typename": "TruckingLocation",
@@ -285,7 +285,7 @@
                         "truckingOrder": {
                             "__typename": "TruckingOrder",
                             "id": "rt0AfPlrq2",
-                            "tripDistanceMiles": 79.6,
+                            "tripDistanceMiles": 200.6,
                             "orderType": "RICE",
                             "locationFrom": {
                                 "__typename": "TruckingLocation",

@@ -22,9 +22,9 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NPM-bY-9dF">
-                                <rect key="frame" x="95.5" y="52" width="223" height="32"/>
+                                <rect key="frame" x="76.5" y="52" width="261" height="32"/>
                                 <segments>
-                                    <segment title="Order By name"/>
+                                    <segment title="Order By distance"/>
                                     <segment title="Order by ID"/>
                                 </segments>
                                 <connections>

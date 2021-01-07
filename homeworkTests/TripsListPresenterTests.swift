@@ -21,7 +21,7 @@ class TripsListPresenterTests: XCTestCase {
         // THEN
         let state = XCTWaiter.wait(for: [exp], timeout: 3)
         if state == XCTWaiter.Result.timedOut {
-            XCTAssertEqual(view.orderedTripsByNameViewModels.first?.tripName, "TruckingTrip")
+            XCTAssertEqual(view.orderedTripsByDistanceViewModels.first?.distance, 79.6)
             XCTAssertEqual(view.orderedTripsByIDViewModels.first?.id, "o8GWEiDXNP")
         } else {
             XCTFail("Could not render view")

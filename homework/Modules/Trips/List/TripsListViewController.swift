@@ -12,7 +12,7 @@ final class TripsListViewController: UIViewController {
     @IBOutlet private weak var segmentedControl: UISegmentedControl!
     private var refreshControl = UIRefreshControl()
     
-    private var orderedTripsByNameViewModels: [TripTableViewModel] = []
+    private var orderedTripsByDistanceViewModels: [TripTableViewModel] = []
     private var orderedTripsByIDViewModels: [TripTableViewModel] = []
     
     // MARK: - Presenter
@@ -60,7 +60,7 @@ private extension TripsListViewController {
     }
     
     func getViewModelsToRender() -> [TripTableViewModel] {
-        return segmentedControl.selectedSegmentIndex == 0 ? orderedTripsByNameViewModels : orderedTripsByIDViewModels
+        return segmentedControl.selectedSegmentIndex == 0 ? orderedTripsByDistanceViewModels : orderedTripsByIDViewModels
     }
 }
 
@@ -78,10 +78,10 @@ extension TripsListViewController: UITableViewDataSource {
 
 // MARK: - TripsListViewContract
 extension TripsListViewController: TripsListViewContract {
-    func renderTrips(orderedByName: [TripTableViewModel], orderedByID: [TripTableViewModel]) {
+    func renderTrips(orderedByDistance: [TripTableViewModel], orderedByID: [TripTableViewModel]) {
         refreshControl.endRefreshing()
         orderedTripsByIDViewModels = orderedByID
-        orderedTripsByNameViewModels = orderedByName
+        orderedTripsByDistanceViewModels = orderedByDistance
         tableView.reloadData()
     }
     

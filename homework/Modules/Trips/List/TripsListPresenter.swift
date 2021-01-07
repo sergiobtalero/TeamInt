@@ -46,24 +46,19 @@ private extension TripsListPresenter {
     
     func getTripsViewModels(from trips: [Trip]) -> [TripTableViewModel] {
         return trips.map { trip in
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MM-dd-yyyy HH:mm"
-            
-            let scheduledDelivery = trip.scheduledDeliveryOn.map { dateFormatter.string(from: $0) } ?? ""
-            let deliveredOnDate = trip.deliveredAt.map { dateFormatter.string(from: $0) } ?? ""
-            
             return TripTableViewModel(tripName: trip.typename,
                                       id: trip.id,
                                       deliveryStatus: trip.deliveryStatus,
-                                      scheduledDelivery: scheduledDelivery,
-                                      deliveredOnDate: deliveredOnDate)
+                                      distance: trip.truckingOrder?.tripDistanceMiles ?? 0)
         }
     }
     
     func generateViewModels(with trips: [Trip]) {
         let tripsSortedByID = trips.sorted(by: { $0.id < $1.id })
-        let tripsSortedByTypename = trips.sorted(by: { $0.typename < $1.typename })
-        view?.renderTrips(orderedByName: getTripsViewModels(from: tripsSortedByTypename),
+        let tripsSortedByDistance = trips.sorted(by: {
+            $0.truckingOrder?.tripDistanceMiles ?? 0.0 < $1.truckingOrder?.tripDistanceMiles ?? 0.0
+        })
+        view?.renderTrips(orderedByDistance: getTripsViewModels(from: tripsSortedByDistance),
                           orderedByID: getTripsViewModels(from: tripsSortedByID))
     }
 }

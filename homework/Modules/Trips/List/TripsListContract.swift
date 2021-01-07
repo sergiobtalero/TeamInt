@@ -6,7 +6,7 @@ protocol TripsListContract {
 }
 
 protocol TripsListViewContract: AnyObject {
-    func renderTrips(orderedByName: [TripTableViewModel], orderedByID: [TripTableViewModel])
+    func renderTrips(orderedByDistance: [TripTableViewModel], orderedByID: [TripTableViewModel])
     func showError()
 }
 
