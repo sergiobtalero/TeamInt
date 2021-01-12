@@ -76,6 +76,7 @@
 		D46CC99525A69DD50062E288 /* request_body.json in Resources */ = {isa = PBXBuildFile; fileRef = D46CC99325A69DD50062E288 /* request_body.json */; };
 		D46CC99F25A69E0A0062E288 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D46CC99E25A69E0A0062E288 /* Colors.xcassets */; };
 		D46CC9A825A69EC30062E288 /* Colors+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC9A725A69EC30062E288 /* Colors+Extensions.swift */; };
+		D46CCA5A25AE14060062E288 /* UIViewController+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CCA5925AE14060062E288 /* UIViewController+Extenstions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,6 +237,7 @@
 		D46CC99325A69DD50062E288 /* request_body.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = request_body.json; sourceTree = "<group>"; };
 		D46CC99E25A69E0A0062E288 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		D46CC9A725A69EC30062E288 /* Colors+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Extensions.swift"; sourceTree = "<group>"; };
+		D46CCA5925AE14060062E288 /* UIViewController+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extenstions.swift"; sourceTree = "<group>"; };
 		E458EF109D2F742E61E13280 /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E481068A30795E1477C1273A /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED094279F9B25C36F85946E4 /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
@@ -683,6 +685,7 @@
 		D46CC96925A69C300062E288 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D46CCA5825AE13F40062E288 /* UIViewController */,
 				D46CC9A625A69EB40062E288 /* Colors */,
 			);
 			path = Extensions;
@@ -728,6 +731,14 @@
 				D46CC9A725A69EC30062E288 /* Colors+Extensions.swift */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		D46CCA5825AE13F40062E288 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D46CCA5925AE14060062E288 /* UIViewController+Extenstions.swift */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1185,6 +1196,7 @@
 				D46CC96F25A69C300062E288 /* TripsListViewController.swift in Sources */,
 				D46CC97325A69C300062E288 /* TripsListContract.swift in Sources */,
 				D46CC9A825A69EC30062E288 /* Colors+Extensions.swift in Sources */,
+				D46CCA5A25AE14060062E288 /* UIViewController+Extenstions.swift in Sources */,
 				D46CC97525A69C300062E288 /* AppDelegate.swift in Sources */,
 				D46CC97025A69C300062E288 /* TripsListPresenter.swift in Sources */,
 			);
