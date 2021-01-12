@@ -23,3 +23,9 @@ All three modules were tested (Data, Domain and Presentation/homework): services
 - During the development of the test, the login service kept failing so mocks oof the expected service response had to be implemented on the app, as well as modifying the code in order to don't throw error but to use the mocks created.
 
 - Map should be implemented along with both AC of such module.
+
+## Tips
+If having trouble builiding the app, try building targets in following order:
+1. Domain
+2. Data
+3. homework
