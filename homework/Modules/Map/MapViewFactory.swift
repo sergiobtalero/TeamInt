@@ -14,7 +14,8 @@ final class MapViewFactory: VCFactoryContract {
     static func makeViewControlller(dependencies: VCDependencies?) -> MapViewController {
         let vc: MapViewController = UIStoryboard(name: "Map", bundle: Bundle.main).instantiate()
         if let dependencies = dependencies as? MapDependencies {
-            vc.presenter = MapPresenter(fromCoordinates: dependencies.fromCoordinates,
+            vc.presenter = MapPresenter(view: vc,
+                                        fromCoordinates: dependencies.fromCoordinates,
                                         toCoordinates: dependencies.toCoordinates)
         } else {
             fatalError("Must provide view dependencies")

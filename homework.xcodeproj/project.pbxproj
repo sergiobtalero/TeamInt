@@ -86,6 +86,8 @@
 		D46CCAB825AF56820062E288 /* MapViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CCAB725AF56820062E288 /* MapViewContract.swift */; };
 		D46CCAC025AF56940062E288 /* MapViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CCABF25AF56940062E288 /* MapViewFactory.swift */; };
 		D46CCAC825AF56A40062E288 /* MapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CCAC725AF56A40062E288 /* MapViewPresenter.swift */; };
+		D46CCAD025AF675E0062E288 /* MapViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CCACF25AF675E0062E288 /* MapViewPresenterTests.swift */; };
+		D46CCAD825AF692A0062E288 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CCAD725AF692A0062E288 /* AppCoordinatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -256,6 +258,8 @@
 		D46CCAB725AF56820062E288 /* MapViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewContract.swift; sourceTree = "<group>"; };
 		D46CCABF25AF56940062E288 /* MapViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewFactory.swift; sourceTree = "<group>"; };
 		D46CCAC725AF56A40062E288 /* MapViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewPresenter.swift; sourceTree = "<group>"; };
+		D46CCACF25AF675E0062E288 /* MapViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewPresenterTests.swift; sourceTree = "<group>"; };
+		D46CCAD725AF692A0062E288 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
 		E458EF109D2F742E61E13280 /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E481068A30795E1477C1273A /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED094279F9B25C36F85946E4 /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
@@ -611,6 +615,8 @@
 				D46CC8C925A649C00062E288 /* Mocks */,
 				D46CC89D25A6464D0062E288 /* Info.plist */,
 				D46CC8BF25A646B50062E288 /* TripsListPresenterTests.swift */,
+				D46CCACF25AF675E0062E288 /* MapViewPresenterTests.swift */,
+				D46CCAD725AF692A0062E288 /* AppCoordinatorTests.swift */,
 			);
 			path = homeworkTests;
 			sourceTree = "<group>";
@@ -1327,8 +1333,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46CCAD825AF692A0062E288 /* AppCoordinatorTests.swift in Sources */,
 				D46CC91425A659FC0062E288 /* GetTripsListUseCaseMock.swift in Sources */,
 				D46CC8C025A646B50062E288 /* TripsListPresenterTests.swift in Sources */,
+				D46CCAD025AF675E0062E288 /* MapViewPresenterTests.swift in Sources */,
 				D46CC90C25A659C00062E288 /* TripsListViewMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,9 +16,23 @@
                     <view key="view" contentMode="scaleToFill" id="77K-JR-MUo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DDc-DC-Seg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="1V4-Cf-180"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DDc-DC-Seg" firstAttribute="leading" secondItem="1V4-Cf-180" secondAttribute="leading" id="3gP-zr-qwu"/>
+                            <constraint firstItem="1V4-Cf-180" firstAttribute="trailing" secondItem="DDc-DC-Seg" secondAttribute="trailing" id="oPN-Xc-vIZ"/>
+                            <constraint firstAttribute="bottom" secondItem="DDc-DC-Seg" secondAttribute="bottom" id="oj0-YW-RtR"/>
+                            <constraint firstItem="DDc-DC-Seg" firstAttribute="top" secondItem="1V4-Cf-180" secondAttribute="top" id="zFo-Td-CSg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="DDc-DC-Seg" id="id2-sP-yhf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exu-qw-bup" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
