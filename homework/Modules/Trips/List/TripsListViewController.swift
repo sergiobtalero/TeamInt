@@ -12,8 +12,7 @@ final class TripsListViewController: UIViewController {
     
     private var orderedTripsByDistanceViewModels: [TripTableViewModel] = []
     private var orderedTripsByIDViewModels: [TripTableViewModel] = []
-    
-    // MARK: - Presenter
+
     var presenter: TripsListPresenterContract?
 
     // MARK: - Life Cycle
@@ -40,6 +39,7 @@ private extension TripsListViewController {
         let nib = UINib(nibName: "TripTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "TripTableViewCell")
         tableView.dataSource = self
+        tableView.delegate = self
         
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         tableView.addSubview(refreshControl)
@@ -64,6 +64,13 @@ extension TripsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let viewModel = getViewModelsToRender()[indexPath.row]
         return viewModel.fill(on: tableView)
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension TripsListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.didSelectRow(indexPath.row)
     }
 }
 

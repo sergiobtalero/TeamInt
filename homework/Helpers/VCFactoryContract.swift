@@ -7,8 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 protocol VCFactoryContract {
     associatedtype VC
-    static func makeViewControlller() -> VC
+    static func makeViewControlller(dependencies: VCDependencies?) -> VC
 }
+
+protocol VCDependencies {}

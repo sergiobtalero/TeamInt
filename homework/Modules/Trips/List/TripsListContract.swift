@@ -12,4 +12,5 @@ protocol TripsListViewContract: AnyObject {
 
 protocol TripsListPresenterContract {
     func fetchData()
+    func didSelectRow(_ row: Int)
 }

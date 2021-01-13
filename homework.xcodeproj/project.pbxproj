@@ -79,6 +79,13 @@
 		D46CCA5A25AE14060062E288 /* UIViewController+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CCA5925AE14060062E288 /* UIViewController+Extenstions.swift */; };
 		D46CCA7825AF37E70062E288 /* TripsListViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CCA7725AF37E70062E288 /* TripsListViewFactory.swift */; };
 		D46CCA8125AF38590062E288 /* VCFactoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CCA8025AF38590062E288 /* VCFactoryContract.swift */; };
+		D46CCA8F25AF3A1C0062E288 /* CoordinatorContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CCA8E25AF3A1C0062E288 /* CoordinatorContract.swift */; };
+		D46CCA9F25AF48890062E288 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CCA9E25AF48890062E288 /* AppCoordinator.swift */; };
+		D46CCAA825AF499D0062E288 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46CCAA725AF499D0062E288 /* Map.storyboard */; };
+		D46CCAB025AF49A90062E288 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CCAAF25AF49A90062E288 /* MapViewController.swift */; };
+		D46CCAB825AF56820062E288 /* MapViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CCAB725AF56820062E288 /* MapViewContract.swift */; };
+		D46CCAC025AF56940062E288 /* MapViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CCABF25AF56940062E288 /* MapViewFactory.swift */; };
+		D46CCAC825AF56A40062E288 /* MapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CCAC725AF56A40062E288 /* MapViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -242,6 +249,13 @@
 		D46CCA5925AE14060062E288 /* UIViewController+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extenstions.swift"; sourceTree = "<group>"; };
 		D46CCA7725AF37E70062E288 /* TripsListViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListViewFactory.swift; sourceTree = "<group>"; };
 		D46CCA8025AF38590062E288 /* VCFactoryContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFactoryContract.swift; sourceTree = "<group>"; };
+		D46CCA8E25AF3A1C0062E288 /* CoordinatorContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorContract.swift; sourceTree = "<group>"; };
+		D46CCA9E25AF48890062E288 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D46CCAA725AF499D0062E288 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		D46CCAAF25AF49A90062E288 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D46CCAB725AF56820062E288 /* MapViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewContract.swift; sourceTree = "<group>"; };
+		D46CCABF25AF56940062E288 /* MapViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewFactory.swift; sourceTree = "<group>"; };
+		D46CCAC725AF56A40062E288 /* MapViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewPresenter.swift; sourceTree = "<group>"; };
 		E458EF109D2F742E61E13280 /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E481068A30795E1477C1273A /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED094279F9B25C36F85946E4 /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
@@ -645,6 +659,7 @@
 		D46CC95C25A69C2F0062E288 /* Trips */ = {
 			isa = PBXGroup;
 			children = (
+				D46CCAA625AF49900062E288 /* Map */,
 				D46CC95D25A69C2F0062E288 /* List */,
 			);
 			path = Trips;
@@ -750,10 +765,25 @@
 		D46CCA7F25AF384D0062E288 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D46CCA9E25AF48890062E288 /* AppCoordinator.swift */,
 				D46CCA8025AF38590062E288 /* VCFactoryContract.swift */,
+				D46CCA8E25AF3A1C0062E288 /* CoordinatorContract.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
+		};
+		D46CCAA625AF49900062E288 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				D46CCAA725AF499D0062E288 /* Map.storyboard */,
+				D46CCAAF25AF49A90062E288 /* MapViewController.swift */,
+				D46CCAB725AF56820062E288 /* MapViewContract.swift */,
+				D46CCABF25AF56940062E288 /* MapViewFactory.swift */,
+				D46CCAC725AF56A40062E288 /* MapViewPresenter.swift */,
+			);
+			name = Map;
+			path = homework/Modules/Map;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -993,6 +1023,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D46CC97125A69C300062E288 /* TripTableViewCell.xib in Resources */,
+				D46CCAA825AF499D0062E288 /* Map.storyboard in Resources */,
 				D46CC96D25A69C300062E288 /* LaunchScreen.storyboard in Resources */,
 				D46CC99425A69DD50062E288 /* Assets.xcassets in Resources */,
 				D46CC99F25A69E0A0062E288 /* Colors.xcassets in Resources */,
@@ -1206,11 +1237,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46CCAC825AF56A40062E288 /* MapViewPresenter.swift in Sources */,
+				D46CCAC025AF56940062E288 /* MapViewFactory.swift in Sources */,
+				D46CCA9F25AF48890062E288 /* AppCoordinator.swift in Sources */,
+				D46CCAB825AF56820062E288 /* MapViewContract.swift in Sources */,
 				D46CC97225A69C300062E288 /* TripTableViewCell.swift in Sources */,
 				D46CC96F25A69C300062E288 /* TripsListViewController.swift in Sources */,
 				D46CC97325A69C300062E288 /* TripsListContract.swift in Sources */,
 				D46CC9A825A69EC30062E288 /* Colors+Extensions.swift in Sources */,
+				D46CCA8F25AF3A1C0062E288 /* CoordinatorContract.swift in Sources */,
 				D46CCA5A25AE14060062E288 /* UIViewController+Extenstions.swift in Sources */,
+				D46CCAB025AF49A90062E288 /* MapViewController.swift in Sources */,
 				D46CC97525A69C300062E288 /* AppDelegate.swift in Sources */,
 				D46CCA7825AF37E70062E288 /* TripsListViewFactory.swift in Sources */,
 				D46CCA8125AF38590062E288 /* VCFactoryContract.swift in Sources */,

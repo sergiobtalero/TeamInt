@@ -4,6 +4,26 @@ import PromiseKit
 import Domain
 import XCTest
 
+class AppCoordinatorMock: AppCoordinatorContract {
+    var childCoordinators: [Coordinator] = []
+    var navigationController: UINavigationController
+    var routePresented: AppRoutes?
+    
+    required init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
+    
+    func prepareTransition(for route: AppRoutes) {
+        routePresented = route
+    }
+
+    func start() {
+        
+    }
+    
+    
+}
+
 class TripsListPresenterTests: XCTestCase {
     func testFetchData() {
         // GIVEN
@@ -11,9 +31,11 @@ class TripsListPresenterTests: XCTestCase {
         let view = TripsListViewMock()
         let getTripListUseCaseMock = GetTripsListUseCaseMock(trips: getTripsFromLocalFile(),
                                                          error: nil)
+        let coordinator = AppCoordinatorMock(navigationController: UINavigationController())
         let presenter = TripsListPresenter(view: view,
                                            getTripsListUseCase: getTripListUseCaseMock,
-                                           getTripsListMockedUseCase: nil)
+                                           getTripsListMockedUseCase: nil,
+                                           coordinator: coordinator)
         
         // WHEN
         presenter.fetchData()
@@ -34,9 +56,11 @@ class TripsListPresenterTests: XCTestCase {
         let view = TripsListViewMock()
         let getTripListUseCaseMock = GetTripsListUseCaseMock(trips: [],
                                                              error: GetTripsListUseCaseError.generic)
+        let coordinator = AppCoordinatorMock(navigationController: UINavigationController())
         let presenter = TripsListPresenter(view: view,
                                            getTripsListUseCase: getTripListUseCaseMock,
-                                           getTripsListMockedUseCase: nil)
+                                           getTripsListMockedUseCase: nil,
+                                           coordinator: coordinator)
         
         // WHEN
         presenter.fetchData()
@@ -48,6 +72,32 @@ class TripsListPresenterTests: XCTestCase {
         } else {
             XCTFail("Did not throw error")
         }
+    }
+    
+    func testShowMapScreenSuccess() {
+        // GIVEN
+        let view = TripsListViewMock()
+        let getTripListUseCaseMock = GetTripsListUseCaseMock(trips: [],
+                                                             error: GetTripsListUseCaseError.generic)
+        let coordinator = AppCoordinatorMock(navigationController: UINavigationController())
+        let presenter = TripsListPresenter(view: view,
+                                           getTripsListUseCase: getTripListUseCaseMock,
+                                           getTripsListMockedUseCase: nil,
+                                           coordinator: coordinator)
+        presenter.trips = getTripsFromLocalFile()
+        
+        // WHEN
+        presenter.didSelectRow(0)
+
+        // THEN
+        let fromCoordinates = TripCoordinates(typename: "GeoPoint",
+                                              latitude: 34.9774055,
+                                              longitude: -90.43559259999999)
+        let toCoordinates = TripCoordinates(typename: "GeoPoint",
+                                            latitude: 35.8743612,
+                                            longitude: -90.5993299)
+        XCTAssertEqual(coordinator.routePresented, .tripsMap(from: fromCoordinates,
+                                                             to: toCoordinates))
     }
 }
 

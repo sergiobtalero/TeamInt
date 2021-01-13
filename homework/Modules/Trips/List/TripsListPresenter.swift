@@ -4,15 +4,18 @@ final class TripsListPresenter {
     private weak var view: TripsListViewContract?
     private let getTripsListUseCase: GetTripsListUseCaseContract
     private var getTripsListMockedUseCase: GetTripsListMockedUseCaseContract?
+    private var coordinator: AppCoordinatorContract
     
     var trips: [Trip] = []
     
     public init(view: TripsListViewContract?,
                 getTripsListUseCase: GetTripsListUseCaseContract,
-                getTripsListMockedUseCase: GetTripsListMockedUseCaseContract?) {
+                getTripsListMockedUseCase: GetTripsListMockedUseCaseContract?,
+                coordinator: AppCoordinatorContract) {
         self.view = view
         self.getTripsListUseCase = getTripsListUseCase
         self.getTripsListMockedUseCase = getTripsListMockedUseCase
+        self.coordinator = coordinator
     }
 }
 
@@ -29,6 +32,15 @@ extension TripsListPresenter: TripsListPresenterContract {
                 self.mockData()
 //                self.view?.showError()
             }
+    }
+    
+    func didSelectRow(_ row: Int) {
+        let trip = trips[row]
+        if let fromCoordinates = trip.truckingOrder?.locationFrom?.coordinates,
+           let toCoordinates = trip.truckingOrder?.locationTo?.coordinates {
+            coordinator.prepareTransition(for: AppRoutes.tripsMap(from: fromCoordinates,
+                                                         to: toCoordinates))
+        }
     }
 }
 

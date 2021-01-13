@@ -11,11 +11,18 @@ import Injector
 import UIKit
 
 final class TripsListViewFactory: VCFactoryContract {
-    static func makeViewControlller() -> TripsListViewController {
+    static func makeViewControlller(dependencies: VCDependencies? = nil) -> TripsListViewController {
         let vc: TripsListViewController = UIStoryboard(name: "TripsList", bundle: Bundle.main).instantiate()
-        vc.presenter = TripsListPresenter(view: vc,
-                                          getTripsListUseCase: Injector.provideGetTripsListUseCase(),
-                                          getTripsListMockedUseCase: Injector.provideGetTripsListMockedUseCase())
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+           let coordinator = appDelegate.coordinator {
+            vc.presenter = TripsListPresenter(view: vc,
+                                              getTripsListUseCase: Injector.provideGetTripsListUseCase(),
+                                              getTripsListMockedUseCase: Injector.provideGetTripsListMockedUseCase(),
+                                              coordinator: coordinator)
+        } else {
+            fatalError("Could not load app coordinator")
+        }
+        
         return vc
     }
 }
