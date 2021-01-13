@@ -77,6 +77,8 @@
 		D46CC99F25A69E0A0062E288 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D46CC99E25A69E0A0062E288 /* Colors.xcassets */; };
 		D46CC9A825A69EC30062E288 /* Colors+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC9A725A69EC30062E288 /* Colors+Extensions.swift */; };
 		D46CCA5A25AE14060062E288 /* UIViewController+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CCA5925AE14060062E288 /* UIViewController+Extenstions.swift */; };
+		D46CCA7825AF37E70062E288 /* TripsListViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CCA7725AF37E70062E288 /* TripsListViewFactory.swift */; };
+		D46CCA8125AF38590062E288 /* VCFactoryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CCA8025AF38590062E288 /* VCFactoryContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -238,6 +240,8 @@
 		D46CC99E25A69E0A0062E288 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		D46CC9A725A69EC30062E288 /* Colors+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Extensions.swift"; sourceTree = "<group>"; };
 		D46CCA5925AE14060062E288 /* UIViewController+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extenstions.swift"; sourceTree = "<group>"; };
+		D46CCA7725AF37E70062E288 /* TripsListViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListViewFactory.swift; sourceTree = "<group>"; };
+		D46CCA8025AF38590062E288 /* VCFactoryContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCFactoryContract.swift; sourceTree = "<group>"; };
 		E458EF109D2F742E61E13280 /* Pods-DomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DomainTests.debug.xcconfig"; path = "Target Support Files/Pods-DomainTests/Pods-DomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E481068A30795E1477C1273A /* Pods_DomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED094279F9B25C36F85946E4 /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
@@ -347,6 +351,7 @@
 				D46CC95825A69C2F0062E288 /* Base.lproj */,
 				D46CC96525A69C300062E288 /* Config */,
 				D46CC96925A69C300062E288 /* Extensions */,
+				D46CCA7F25AF384D0062E288 /* Helpers */,
 				D46CC95B25A69C2F0062E288 /* Modules */,
 				D46CC96A25A69C300062E288 /* Resources */,
 			);
@@ -653,6 +658,7 @@
 				D46CC95F25A69C2F0062E288 /* TripsListViewController.swift */,
 				D46CC96025A69C2F0062E288 /* TripsListPresenter.swift */,
 				D46CC96425A69C2F0062E288 /* TripsListContract.swift */,
+				D46CCA7725AF37E70062E288 /* TripsListViewFactory.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -739,6 +745,14 @@
 				D46CCA5925AE14060062E288 /* UIViewController+Extenstions.swift */,
 			);
 			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		D46CCA7F25AF384D0062E288 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D46CCA8025AF38590062E288 /* VCFactoryContract.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1198,6 +1212,8 @@
 				D46CC9A825A69EC30062E288 /* Colors+Extensions.swift in Sources */,
 				D46CCA5A25AE14060062E288 /* UIViewController+Extenstions.swift in Sources */,
 				D46CC97525A69C300062E288 /* AppDelegate.swift in Sources */,
+				D46CCA7825AF37E70062E288 /* TripsListViewFactory.swift in Sources */,
+				D46CCA8125AF38590062E288 /* VCFactoryContract.swift in Sources */,
 				D46CC97025A69C300062E288 /* TripsListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

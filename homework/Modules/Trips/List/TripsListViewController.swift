@@ -1,5 +1,3 @@
-import Injector
-import Domain
 import UIKit
 
 final class TripsListViewController: UIViewController {
@@ -16,21 +14,14 @@ final class TripsListViewController: UIViewController {
     private var orderedTripsByIDViewModels: [TripTableViewModel] = []
     
     // MARK: - Presenter
-    private lazy var presenter: TripsListPresenterContract = {
-        let getTripsUseCase = Injector.provideGetTripsListUseCase()
-        let getTripsListMockedUseCase = Injector.provideGetTripsListMockedUseCase()
-        
-        return TripsListPresenter(view: self,
-                                  getTripsListUseCase: getTripsUseCase,
-                                  getTripsListMockedUseCase: getTripsListMockedUseCase)
-    }()
+    var presenter: TripsListPresenterContract?
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         setupTableView()
-        presenter.fetchData()
+        presenter?.fetchData()
     }
     
     @IBAction private func didTapSegmentedControlTab(_ sender: Any) {
@@ -56,7 +47,7 @@ private extension TripsListViewController {
     
     @objc
     func refresh(_ sender: AnyObject) {
-        presenter.fetchData()
+        presenter?.fetchData()
     }
     
     func getViewModelsToRender() -> [TripTableViewModel] {
